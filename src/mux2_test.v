@@ -14,7 +14,15 @@ module mux2_test;
       in0 <= -1;
       in1 <= 1;
       sel <= 1;
+
+      #10;
+      sel <= 0;
+      #10;
+      sel <= 1;
+      in0 = 254;
       #100;
+
+
       $finish;
 
    end;
